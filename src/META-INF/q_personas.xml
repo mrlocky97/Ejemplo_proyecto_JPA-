@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+  				 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  				 xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_1_0.xsd"
+  				 version="1.0">
+  				 
+  
+	  <entity class="cursoj.datos.model.Persona">
+	          <named-query name="personas_findByGrupo">
+	            <query>
+	                <![CDATA[
+	                    SELECT p FROM Persona p 
+	                    WHERE p.name=:pGrupo
+	                    ORDER BY p.id
+	                ]]>
+	            </query>      
+	            <hint name="org.hibernate.comment" value="personas_findByGrupo"/>
+	            <hint name="org.hibernate.readonly" value="true"/>
+	        </named-query>
+	        
+        <named-query name="personas_countByGroup" >        
+            <query>
+                <![CDATA[
+                    SELECT count(p.id) FROM Persona p
+                    WHERE p.name =:pGrupo                    
+                ]]>
+            </query>      
+            <hint name="org.hibernate.comment" value="personas_countByGroup"/>
+            <hint name="org.hibernate.readonly" value="true"/>
+        </named-query> 
+  
+          <named-query name="personas_getNameById">
+            <query>
+                <![CDATA[
+                    SELECT p.name FROM Persona p
+                    WHERE p.id=:pName                    
+                ]]>
+            </query>      
+            <hint name="org.hibernate.comment" value="StreTbMaestra_findByTipo"/>
+            <hint name="org.hibernate.readonly" value="true"/>
+        </named-query>  
+              	        
+	  </entity>				 
+  
+  	  <!-- 	................................... QUERIES ................................... 
+       <named-query name="StreTbMaestra_findAll">
+            <query>
+                <![CDATA[
+                    SELECT t FROM StreTbMaestra t
+                ]]>
+            </query>      
+            <hint name="org.hibernate.comment" value="StreTbMaestra_findAll"/>
+            <hint name="org.hibernate.readonly" value="true"/>
+        </named-query>  
+            	
+
+                    	
+        <named-query name="StreTbMaestra_findNameById">
+            <query>
+                <![CDATA[
+                    SELECT t.deTabla FROM StreTbMaestra t 
+                    WHERE t.id.idTabla=:idTabla
+                    AND t.id.coTabla=:coTabla 
+                ]]>
+            </query>      
+            <hint name="org.hibernate.comment" value="StreTbMaestra_findByTipo"/>
+            <hint name="org.hibernate.readonly" value="true"/>
+        </named-query>  
+   
+        <named-query name="StreTbMaestra_findByPadre">
+            <query>
+                <![CDATA[
+                    SELECT t FROM StreTbMaestra t 
+                    WHERE t.idTablaPadre =:idTablaPadre
+                    AND t.id.coTabla=:coTabla
+                    ORDER BY t.deTabla
+                ]]>
+            </query>      
+            <hint name="org.hibernate.comment" value="StreTbMaestra_findByPadre"/>
+            <hint name="org.hibernate.readonly" value="true"/>
+        </named-query>  
+                        		
+        <named-query name="StreTbMaestra_findPadreById">
+            <query>
+                <![CDATA[
+                    SELECT t FROM StreTbMaestra t 
+                    WHERE t.id.idTabla= :idTabla
+                    AND t.id.coTabla=:coTabla
+                ]]>
+            </query>      
+            <hint name="org.hibernate.comment" value="StreTbMaestra_findPadreById"/>
+            <hint name="org.hibernate.readonly" value="true"/>
+        </named-query> 
+                                		
+  </entity>
+  -->
+</entity-mappings>   

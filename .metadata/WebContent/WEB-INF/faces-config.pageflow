@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15113727940870" configfile="/Jsf2/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="login.xhtml" x="192" y="120" id="pf15114670128330" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf15114670128332 pf15114672682965" path="/login.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="error.xhtml" x="312" y="228" id="pf15114670128334" inlinks="pf15114670128332" path="/error.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="paginaA.xhtml" id="pf15114672682966" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf15114672682965" path="/paginaA.xhtml"/>
+  <links id="pf15114670128332" target="pf15114670128334" source="pf15114670128330" outcome="error" fromaction="#{mBeanServiceSecurity.authenticate}"/>
+  <links id="pf15114672682965" target="pf15114672682966" source="pf15114670128330" outcome="paginaA" fromaction="#{mBeanServiceSecurity.authenticate}"/>
+</pageflow:Pageflow>

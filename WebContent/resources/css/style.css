@@ -1,0 +1,167 @@
+@CHARSET "ISO-8859-1";
+
+/*.................................................................
+common
+.................................................................*/
+html { 
+  height: 100%;
+}
+
+img {
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+}
+
+.waiting * { cursor: 'wait' }
+
+/*
+.animated .ui-progressbar-value { 
+    background-image: url("www.primefaces.org/showcase/javax.faces.resource/demo/images/pbar-ani.gif.xhtml"); 
+}
+*/
+    
+/*.................................................................
+pobj
+.................................................................*/
+.pobj_cont_panel {
+	width:100%;
+	min-height:32px;
+	padding: 6px 0 2px 0;	
+	border-bottom: 1px solid #eeeeee;
+}
+
+.pobj_cont_subpanel {
+	width:100%;
+	min-height:32px;
+	padding: 6px 0 2px 0;
+}
+.pobj_cont_commands {
+	width:auto;
+	min-height:32px;	
+	margin: 6px 0px 0px 6px;		
+}
+
+.pobj_input_mrg {	
+	float:left;
+	width:16px;
+	min-width:16px;
+	display: inline-block;
+}
+
+.pobj_cont_input {
+	float:left;
+	width:130px;
+	height:30px;	
+}
+
+.pobj_cont_label {
+	float:left;
+	width:100px;
+	height:30px;
+	padding-top:4px;
+}
+
+.pobj_radio_cont_wg {
+	float:left;
+	width:32px;
+	height:30px;
+	margin-left:16px;
+}
+
+.pobj_radio_cont_label {
+	float:left;
+	width:104px;
+	height:30px;	
+	padding-top:4px;
+}
+
+
+/*importante para los objetos de primeface p:selectOneMenu */
+
+.ui-widget {
+    font-size: 1.0em;
+}
+.ui-widget .ui-widget {
+    font-size: 0.9em;
+}
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+    font-size: 0.9em;
+}
+ 
+.ui-selectonemenu-label{
+     width:100% !important;
+ }
+ .ui-selectonemenu{
+     width:100% !important;
+ }
+ 
+ .ui-widget-content {
+    background: none;
+    background-color: #F9FAFB;
+    border: 1px solid #dddddd;
+    color: #362b36;
+}
+
+.ui-menuitem-link {
+	font-size: 0.8em;
+}
+
+.ui-widget-header {
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.ui-layout-unit-header, .ui-layout-unit-footer {
+    font-size: 0.8em;
+}
+
+.ui-tooltip {
+    background: #FFFF99;
+    font-size: 0.8em;
+}
+
+.ui-commandlink{
+	color: #000000;/**/
+	font-family: sans-serif;
+	font-size: 12px;
+	/*font-weight:bold;*/
+	line-height: 12px;	
+	text-decoration: none;
+}
+
+.tab_claro {	
+	color: #0070A3;
+	float:left;
+  width: 135px;
+  height: 15px;  
+  padding:6px 0px 0px 6px;
+  background-image:url("#{resource['image:tab_claro_141x21.png']}");    
+  text-align: center;
+}
+
+
+.tab_oscuro {	
+	float:left;
+  width: 135px;
+  height: 15px;
+  padding:6px 0px 0px 6px;
+  background-image:url("#{resource['image:tab_oscuro_141x21.png']}");
+	color: #0070A3;
+	font-family: sans-serif;
+	font-size: 12px;	
+	line-height: 12px;  
+  text-align: center;    
+}
+
+.suceso {
+	font-family: sans-serif;
+	font-size: 11px;	
+	line-height: 12px;  	
+}
+	
+.negrita {
+	cursor: pointer;
+	font-family: sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}	

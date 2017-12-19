@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>J2ee</title>
+
+</h:head>
+
+<h:body>
+	
+	<h1>Lista de Personas</h1>
+	
+	<h:dataTable
+		 id="table_personas" style="margin-bottom:8px;"
+		 value="#{mBeanPaginaB.listPersonas}" 
+		 var="per"
+		 rowKey="#{per.id}" 
+		 selectionMode="single"	 
+		 editable="false"
+		 emptyMessage="not devices" rowIndexVar="cont" >
+	
+		<h:column id="columnId">
+			<h:outputText value="#{per.id}" />
+		</h:column>
+	
+		<h:column id="columnName">
+			<h:outputText value="#{per.name}" />		
+		</h:column>
+	
+		<h:column id="columnGroup">
+			<h:outputText value="#{per.grupo}" />		
+		</h:column>
+		
+		<h:column id="columnSueldo">
+			<h:outputText value="#{per.sueldo}" />		
+		</h:column>
+		
+	
+	</h:dataTable>	
+		
+</h:body>
+  
+</html>

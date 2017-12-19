@@ -1,0 +1,13 @@
+	<!-- css resources 
+	<h:outputStylesheet library="css" 		 name="layout.css" /> -->			
+	
+	<!-- jquery (primefaces)
+	<h:outputScript library="primefaces" name="jquery/jquery.js" target="head" />-->	
+					   						
+				   					
+	<!--  page scripts 				
+	<!--<h:outputScript library="page" name="/.js" />-->		
+	<script type="text/javascript">		
+		//window.onload = function() {};		
+	</script>
+	

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>STRE</title>
+	
+	<!-- .................... pages css resources ..................... -->
+	<h:outputStylesheet library="css" name="layout.css" />
+	<h:outputStylesheet library="css" name="style.css" />
+
+</h:head>
+
+<h:body>
+
+	<div class="header">
+		<div class="header_left" />
+		<div class="header_right" />
+	</div>
+
+
+	<div class="page_wrapper">
+	
+		<div id="panel_form" style="width:360px;margin:auto;">
+			<div>
+				<h:form id="form_personaAlta">
+
+					<fieldset style="display: inline;">
+						<legend>Login</legend>
+						<table>
+							<tr>
+								<td><h:outputLabel for="persId" value="Id:" /></td>
+								<td>
+									
+									<h:inputText id="persId" value="#{mBeanPaginaA.persona.id}"
+										requiredMessage="Debe introducir id de persona."
+										required="true" />
+									<h:message for="persId" />										
+								</td>
+							</tr>
+							<tr>
+								<td><h:outputLabel for="persName" value="Name:" /></td>
+								<td>
+									
+									<h:inputText id="persName" value="#{mBeanPaginaA.persona.name}"
+										requiredMessage="Debe introducir nombre de persona."
+										required="true" />
+									<h:message for="persName" />										
+								</td>
+							</tr>
+							<tr>
+								<td><h:outputLabel for="persGrupo" value="Grupo:" /></td>
+								<td>
+									
+									<h:inputText id="persGrupo" value="#{mBeanPaginaA.persona.grupo}"
+										requiredMessage="Debe introducir grupo de persona."
+										required="true" />
+									<h:message for="persGrupo" />										
+								</td>
+							</tr>
+							<tr>
+								<td><h:outputLabel for="persSueldo" value="Sueldo:" /></td>
+								<td>
+									
+									<h:inputText id="persSueldo" value="#{mBeanPaginaA.persona.sueldo}"
+										requiredMessage="Debe introducir sueldo de persona."
+										required="true" />
+									<h:message for="persSueldo" />										
+								</td>
+							</tr>
+
+						</table>
+					</fieldset>
+					<div id="buttons"
+						style="width: 100%; padding-top: 8px; margin-right: 5px; text-align: right;">
+
+						<h:commandButton id="Aceptar_Button" value="Aceptar"
+							action="#{mBeanPaginaA.ejecutarAlta}" 
+							style="width:margin:left;" />
+					</div>
+				</h:form>
+
+
+			</div>
+			
+		</div>
+		
+			
+			
+		<h:panelGroup id="panel_mensaje" style="width:360px;margin:auto;text-align:center;font-weight:bold;" rendered="#{visorLogin.noDisponible}" autoUpdate="true">
+			<h:outputLabel value="Servicio no disponible. Intente más tarde." style="color: red;"/>
+		</h:panelGroup>
+		
+		<h:panelGroup id="panel_invalido" style="width:360px;margin:auto;text-align:center;font-weight:bold;" rendered="#{visorLogin.noValido}" autoUpdate="true">
+			<h:outputLabel value="Usuario o contraseña incorrecto." style="color: red;"/>
+		</h:panelGroup>
+	</div>
+	
+	
+	<!-- .........................................footer<a href="/jsf/about.xhtml">about</a>................. -->		 	
+	<div class="footer" style="position:absolute; left:20px; right:20px; bottom:0px; z-index:0; width: 95%">
+		<div class="footer_left">		
+			<h:outputLabel value="Java Server Faces."  style="margin-left:10px;font-size:10px;"/>					
+		</div>
+		<div class="footer_center">						
+			<h:outputLabel value="2.1" style="font-size:10px;"/>			
+		</div>
+		<div class="footer_right">		
+			<h:outputLabel value="Curso J2EE." style="margin-right:10px;font-size:10px;"/>
+		</div>
+	</div>		
+
+
+	 
+ 	<h:link value="about" outcome="about" />
+
+
+
+</h:body>
+
+</html>
